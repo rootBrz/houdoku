@@ -12,10 +12,11 @@ const ToggleThemeSwitch: React.FC<Props> = (props: Props) => {
   const theme = useMantineTheme();
 
   return (
-    <Switch size="sm"
+    <Switch
+      size="sm"
       onLabel={<IconSun size="0.7rem" stroke={2.5} color={theme.colors.yellow[4]} />}
       offLabel={<IconMoonStars size="0.7rem" stroke={2.5} color={theme.colors.blue[6]} />}
-      checked={colorScheme === 'dark' ? false : true}
+      checked={colorScheme !== 'dark'}
       onChange={() => toggleColorScheme()}
       style={{ display: 'none' }}
       styles={{
