@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "es2021",
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "declaration": true,
     "declarationMap": true,
     "noEmit": true,
@@ -20,7 +23,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "allowJs": true
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "exclude": [
     "test",
@@ -29,5 +38,5 @@
     "app/renderer.prod.js",
     "app/dist",
     "dll"
-  ]
+  ],
 }

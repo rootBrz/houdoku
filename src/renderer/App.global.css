@@ -1,0 +1,46 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+@import 'style/colors.css';
+@import 'style/titlebar.css';
+@import 'style/flags.css';
+
+body {
+  /* height: 100vh; */
+  overflow-y: hidden;
+  font-family: Arial, Helvetica, Helvetica Neue, serif;
+  font-size: 14px;
+}
+
+#root {
+  height: calc(100vh);
+  overflow-y: auto;
+
+  --titlebar-height: 24px;
+  margin-top: var(--titlebar-height);
+}
+
+#titlebar.hidden+#root {
+  --titlebar-height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  /* dark 6 */
+  background: #25262B;
+}
+
+::-webkit-scrollbar-thumb {
+  /* gray 6 */
+  background: #868E96;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* gray 7 */
+  background: #495057;
+}
