@@ -67,7 +67,7 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "xgi",
+      "owner": "rootBrz",
       "repo": "houdoku"
     }
   },
